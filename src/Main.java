@@ -20,10 +20,9 @@ public class Main {
         //boat.printDeviceListOfTheBoat(boat);
 
         controlPanel.subscribe(boat);
-        boat.subscribeCP(controlPanel);
 
-        controlPanel.sendCommand(boat, "turn on");
-        controlPanel.sendCommand(boat, "set mothor rpm to 2000");
+        controlPanel.notifySubscribedDevices("turn on");
+        controlPanel.notifySubscribedDevices("set mothor rpm to 2000");
 
     }
 

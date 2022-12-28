@@ -44,18 +44,6 @@ public class ControlPanel implements Subject {
 
 
     /**
-     * Method to send a command to a device
-     * @param boat the boat to send the command to
-     * @param command the command to send to the boat.
-     *                It must be "turn on" or "set mothor rpm to 2000"
-     */
-    @Override
-    public void sendCommand(@NotNull Boat boat, @NotNull String  command) throws IllegalCommandException {
-        notifySubscribedDevices(command);
-    }
-
-
-    /**
      * Method to add or remove a device from the boat. If the device is added, it
      * can be manipulated, if the device is removed, it can no longer be used
      * @param device cannot be null. It must be a valid Device

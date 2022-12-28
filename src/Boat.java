@@ -51,24 +51,14 @@ public class Boat implements Observer{
 
         if (Objects.equals(command, "turn on")) {
             state = "on";
-            // System.out.println("The boat is on");
+            System.out.println("The boat is on");
 
         } else if (Objects.equals(command, "set mothor rpm to 2000")) {
             state = "on";
             engineRPM = 2000;
-            // System.out.println("Setting the engine RPM to 2000");
+            System.out.println("Setting the engine RPM to 2000");
         } else {
             throw new IllegalCommandException ("The command must be \"turn on\" or \"set mothor rpm to 2000\"");
         }
-    }
-
-
-    /**
-     * Method to subscribe
-     * @param cp
-     */
-    @Override
-    public void subscribeCP(ControlPanel cp) {
-        controlPanel = cp;
     }
 }

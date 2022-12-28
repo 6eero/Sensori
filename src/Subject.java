@@ -21,12 +21,4 @@ public interface Subject {
      */
     void notifySubscribedDevices(String command) throws IllegalCommandException;
 
-    /**
-     * Method to send a command to a device
-     * @param boat the boat to send the command to
-     * @param command the command to send to the boat.
-     *                It must be "turn on" or "set mothor rpm to 2000"
-     */
-    void sendCommand(Boat boat, String command) throws IllegalCommandException;
-
 }
